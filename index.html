@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shining Star Group of Companies - Building Trust Across Every Sector</title>
+    
+      <!-- FAVICON LINK: -->
+     <link href="./favicon.ico" rel="icon">
+    <!-- END FAVICON LINKS -->
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons for modern visuals -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Define Custom Colors and CSS Variables */
+        :root {
+            --midnight-blue: #003366;
+            --copper-gold: #B8860B;
+            --shining-accent: #FFD700;
+            --charcoal: #333333;
+            --whatsapp-green: #25D366; 
+            --whatsapp-hover: #25D366; /* Using same color as base for the requested consistent color */
+        }
+
+        /* Tailwind Configuration */
+        .ssg-shining-text {
+            /* Text gradient for metallic look */
+            background: linear-gradient(180deg, var(--shining-accent) 20%, var(--copper-gold) 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Subtle text shadow for glow */
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .ssg-shining-btn {
+            background: linear-gradient(145deg, var(--shining-accent), var(--copper-gold));
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            border: 1px solid var(--shining-accent);
+        }
+
+        .ssg-shining-btn:hover {
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .ssg-nav-link-gold:hover {
+            text-shadow: 0 0 10px var(--shining-accent);
+        }
+
+        /* Texture for Deep Blue Sections (Hero, Leadership, Footer) */
+        .deep-blue-textured {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .deep-blue-textured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1%, transparent 70%);
+            opacity: 1;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Floating WhatsApp Button Styles */
+        .fixed-floating-button {
+            transition: all 0.3s ease;
+        }
+        
+        /* Pulsing Shadow Animation for the FAB */
+        @keyframes pulse-shadow {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .whatsapp-pulse {
+            animation: pulse-shadow 2s infinite;
+        }
+        
+        /* Gold border on hover for WhatsApp button */
+        .fixed-floating-button:hover .whatsapp-icon-circle {
+            box-shadow: 0 0 0 3px var(--copper-gold);
+        }
+
+        .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark-blue': 'var(--midnight-blue)',
+                        'copper-gold': 'var(--copper-gold)',
+                        'shining-accent': 'var(--shining-accent)',
+                        'charcoal': 'var(--charcoal)',
+                        'whatsapp': 'var(--whatsapp-green)',
+                        'whatsapp-hover': 'var(--whatsapp-hover)',
+                        'silver-tagline': '#C0C0C0',
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="font-sans text-charcoal bg-white">
+
+    <!-- Mobile Menu Modal -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-primary-dark-blue/95 backdrop-blur-sm transition-opacity duration-300">
+        <div class="h-full flex flex-col p-6">
+            <div class="flex justify-end">
+                <button onclick="toggleMobileMenu()" class="text-white hover:text-shining-accent">
+                    <i class="ph ph-x-circle text-3xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 mt-8">
+                <a href="#about" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">About Us</a>
+                <a href="#leadership" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">Leadership</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">Portfolio</a>
+                <a href="#news" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">News</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Subsidiary Modal -->
+    <div id="subsidiary-modal" class="fixed inset-0 z-40 hidden bg-charcoal/90 backdrop-blur-sm items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 md:p-8 transform transition-transform duration-300 scale-95 opacity-0" id="modal-content">
+            <div class="flex justify-between items-start border-b pb-4 mb-4">
+                <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-primary-dark-blue"></h2>
+                <button onclick="closeModal()" class="text-charcoal hover:text-red-500 transition-colors">
+                    <i class="ph ph-x-circle text-3xl"></i>
+                </button>
+            </div>
+            <p id="modal-overview" class="text-charcoal mb-6 leading-relaxed"></p>
+            <div id="modal-socials" class="flex flex-wrap gap-4 pt-4 border-t">
+                <!-- Social links will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-30 bg-primary-dark-blue shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Area -->
+            <a href="#home" class="flex items-center space-x-2">
+                <!-- Placeholder Image Logo reflecting Midnight Blue and Gold branding -->
+                <img src="./Public/IMAGE/LOGOS/SSG Logo Final - Updated.png" alt="Shining Star Group Logo" class="h-10 w-auto object-contain">
+                <!-- Full Name -->
+                <span class="hidden sm:inline text-lg font-semibold ssg-shining-text tracking-wider">Shining Star Group SSG</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex space-x-6 lg:space-x-10">
+                <a href="#about" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">About Us</a>
+                <a href="#leadership" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">Leadership</a>
+                <a href="#portfolio" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">Portfolio</a>
+                <a href="#news" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">News</a>
+                <a href="#contact" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-shining-accent hover:text-white">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+    </header>
+
+<!-- Main Content Area -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 min-h-screen">
+    <!-- Banner Slider -->
+    <div class="slider-container relative w-full h-64 overflow-hidden rounded-lg shadow-lg mb-12">
+        <div class="slides flex transition-transform duration-700 ease-in-out" id="slider">
+            <div class="slide w-full h-full flex-shrink-0">
+                <img src="./Public/Image/Slide+1.png" alt="Slide 1" class="w-full h-full object-cover">
+            </div>
+            <div class="slide w-full h-full flex-shrink-0">
+                <img src="./Public/Image/Slide+2.png" alt="Slide 2" class="w-full h-full object-cover">
+            </div>
+            <div class="slide w-full h-full flex-shrink-0">
+                <img src="./Public/Image/Slide+3.png" alt="Slide 3" class="w-full h-full object-cover">
+            </div>
+            <div class="slide w-full h-full flex-shrink-0">
+                <img src="./Public/Image/Slide+4.png" alt="Slide 4" class="w-full h-full object-cover">
+            </div>
+            <div class="slide w-full h-full flex-shrink-0">
+                <img src="./Public/Image/Slide+5.png" alt="Slide 5" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full" id="prevBtn">❮</button>
+        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full" id="nextBtn">❯</button>
+    </div>
+
+    <!-- HOME PAGE -->
+    <section id="page-home" class="page-content deep-blue-textured p-6 md:p-10 rounded-xl bg-primary-dark-blue text-white" data-title="Home Page">
+        <div class="bg-primary-dark-blue/5 p-6 md:p-10 rounded-xl shadow-xl border border-primary-dark-blue/10 mb-12">
+              <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
+                The Shinning Star Group of Companies (SSG)
+                "Building Trust Across Every Sector"
+                </h2>
+            <p class="text-lg md:text-xl font-light max-w-4xl">
+                The Shining Star Group of Companies is a leading, 100% Liberian-owned entity dedicated to delivering innovative solutions across various sectors. Our team of skilled professionals is committed to driving sustainable development and enhancing community well-being through impactful projects.
+            </p>
+         <div class="mt-8 space-x-4">
+    <button class="ssg-shining-btn hover:bg-[#A91219] text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
+        Explore Our Projects
+    </button>
+    <button class="bg-white hover:bg-gray-200 text-primary-dark-blue font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+        Contact Us
+    </button>
+</div>
+
+        </div>
+    </section>
+</main>
+
+
+        <!-- Quick Facts Overview -->
+        <section class="bg-white py-12 shadow-inner">
+            <div class="container mx-auto px-4 text-center">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4">
+                        <p class="text-5xl font-extrabold mb-2 ssg-shining-text">10+</p>
+                        <p class="text-lg font-medium text-primary-dark-blue">Diverse Sectors</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-5xl font-extrabold mb-2 ssg-shining-text">Liberia</p>
+                        <p class="text-lg font-medium text-primary-dark-blue">100% Liberian Owned</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-5xl font-extrabold mb-2 ssg-shining-text">2022</p>
+                        <p class="text-lg font-medium text-primary-dark-blue">Founded</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
+                    About The Group
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Overview and Mission -->
+                    <div class="bg-primary-dark-blue/5 p-6 md:p-10 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-dark-blue">Overview & Mission</h3>
+                        <p class="mb-4 text-charcoal leading-relaxed">
+                            Founded in July 2022 and proudly 100% Liberian-owned, SSG is a dynamic business conglomerate headquartered in Chubor, Montserrado County. Our mission is to empower communities and drive national development through reliable, quality, and affordable services across a wide range of sectors.
+                        </p>
+                        <p class="text-charcoal leading-relaxed font-medium">
+                            We are committed to delivering trustworthy, innovative, and people-centered services that improve lives and build national capacity.
+                        </p>
+                    </div>
+
+                    <!-- Vision, Values & Promise -->
+                    <div class="space-y-6">
+                        <!-- Vision -->
+                        <div class="p-6 rounded-xl border border-copper-gold/50 bg-white shadow-md">
+                            <h3 class="text-2xl font-semibold mb-3 text-copper-gold flex items-center"><i class="ph ph-eye text-3xl mr-3"></i> Our Vision</h3>
+                            <p class="text-charcoal">To be Liberia's most trusted and diversified business group—a shining example of integrity, innovation, and excellence.</p>
+                        </div>
+                        <!-- Promise -->
+                        <div class="p-6 rounded-xl border border-copper-gold/50 bg-white shadow-md">
+                            <h3 class="text-2xl font-semibold mb-3 text-copper-gold flex items-center"><i class="ph ph-handshake text-3xl mr-3"></i> Our Promise</h3>
+                            <p class="text-charcoal">We promise to deliver trustworthy, innovative, and people-centered services that improve lives and build national capacity.</p>
+                        </div>
+                        <!-- Values -->
+                        <div class="p-6 rounded-xl border border-copper-gold/50 bg-white shadow-md">
+                            <h3 class="text-2xl font-semibold mb-3 text-copper-gold flex items-center"><i class="ph ph-star text-3xl mr-3"></i> Core Values</h3>
+                            <p class="text-charcoal font-medium">Integrity, Quality, Community Impact, and Innovation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Leadership/Board Section (Deep Blue Background) -->
+        <section id="leadership" class="deep-blue-textured py-16 md:py-24 bg-primary-dark-blue text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
+                    Leadership & Governance
+                </h2>
+                <p class="text-center text-silver-tagline max-w-3xl mx-auto mb-16">
+                    Our foundation is built on strong governance, unified brand architecture, and a commitment to operational excellence guided by experienced leaders.
+                </p>
+
+                <!-- Updated Leadership Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- General Manager: Heston M. Jackson,II. -->
+                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
+                        <img src="/Public/IMAGE/Heston M. Jackson,.jpg" alt="General Manager Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
+                        <h3 class="text-xl font-semibold ssg-shining-text">Heston M. Jackson, II.</h3>
+                        <p class="text-sm font-light text-silver-tagline mb-2">General Manager</p>
+                        <p class="text-xs italic text-white/70">"Driving the vision for a brighter Liberia."</p>
+                    </div>
+                    <!-- COO: Emmanuel Freeman -->
+                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
+                        <img src="https://placehold.co/150x150/B8860B/003366?text=COO" alt="COO Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
+                        <h3 class="text-xl font-semibold ssg-shining-text">Emmanuel Freeman</h3>
+                        <p class="text-sm font-light text-silver-tagline mb-2">Chief Operations Officer (COO)</p>
+                        <p class="text-xs italic text-white/70">"Ensuring operational excellence across all sectors."</p>
+                    </div>
+                    <!-- CFO: Justin Harris -->
+                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
+                        <img src="https://placehold.co/150x150/B8860B/003366?text=CFO" alt="CFO Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
+                        <h3 class="text-xl font-semibold ssg-shining-text">Justin Harris</h3>
+                        <p class="text-sm font-light text-silver-tagline mb-2">Chief Financial Officer (CFO)</p>
+                        <p class="text-xs italic text-white/70">"Sustaining growth with integrity."</p>
+                    </div>
+                    <!-- HR: Tenizee Baryogar -->
+                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
+                        <img src="https://placehold.co/150x150/B8860B/003366?text=HR" alt="HR Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
+                        <h3 class="text-xl font-semibold ssg-shining-text">Tenizee Baryogar</h3>
+                        <p class="text-sm font-light text-silver-tagline mb-2">Head of HR & Admin</p>
+                        <p class="text-xs italic text-white/70">"Our people are our greatest star."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Portfolio/Subsidiaries Section -->
+        <section id="portfolio" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shining-text">
+                    Our Diversified Subsidiaries
+                </h2>
+                <p class="text-lg text-charcoal text-center max-w-3xl mx-auto mb-16">
+                    SSG operates across 10 vital sectors, delivering quality, reliable, and people-centered services that drive national development.
+                </p>
+
+                <!-- Subsidiary Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Construction & Engineering -->
+                    <div onclick="openModal('Construction & Engineering', '🏗️', 'Focusing on reliable infrastructure development, from commercial building to public works. We ensure quality, safety, and timely project delivery, using innovative methods to support Liberia\'s growth.', {facebook: 'https://facebook.com/SSGConstruction', linkedin: 'https://linkedin.com/SSGConstruction'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-hammer text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Construction & Engineering</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Focusing on reliable infrastructure development, from commercial building to public works...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Security & Safety Services -->
+                    <div onclick="openModal('Security & Safety Services', '🛡️', 'Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting. Building trust, one client at a time.', {facebook: 'https://facebook.com/SSGSecurity'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shield text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Security & Safety Services</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Health & Insurance Services -->
+                    <div onclick="openModal('Health & Insurance Services', '🏥', 'Committed to community well-being by offering accessible health services and comprehensive insurance packages for families and corporations.', {instagram: 'https://instagram.com/SSGHealth'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-heartbeat text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Health & Insurance Services</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Committed to community well-being by offering accessible health services and comprehensive insurance packages...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Printing, Media & Visibility -->
+                    <div onclick="openModal('Printing, Media & Visibility Consultancy', '🖨️', 'Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy to make your brand shine.', {facebook: 'https://facebook.com/SSGMedia'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-newspaper text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Printing, Media & Visibility</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Auto Repairs, Sales, Shipping & Logistics -->
+                    <div onclick="openModal('Auto Repairs, Sales, Shipping & Logistics', '🚗', 'Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport of goods and vehicles.', {facebook: 'https://facebook.com/SSGAuto'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-truck text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Auto Repairs, Sales, Shipping & Logistics</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Education & Vocational Training -->
+                    <div onclick="openModal('Education & Vocational Training', '🎓', 'Empowering the next generation with practical skills and high-quality vocational education necessary for national capacity building.', {facebook: 'https://facebook.com/SSGEducation'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-books text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Education & Vocational Training</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Empowering the next generation with practical skills and high-quality vocational education...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Mining, Waste Management, and Environmental Services -->
+                    <div onclick="openModal('Mining, Waste Management, and Environmental Services', '🌍', 'Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting services.', {facebook: 'https://facebook.com/SSGMining'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-leaf-bold text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mining & Environmental</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Mineral Water Production -->
+                    <div onclick="openModal('Mineral Water Production', '💧', 'Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.', {facebook: 'https://facebook.com/SSGWater'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-drop text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mineral Water Production</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- General Merchandise -->
+                    <div onclick="openModal('General Merchandise', '🛒', 'Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.', {facebook: 'https://facebook.com/SSGMerch'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shopping-bag text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">General Merchandise</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+
+                    <!-- Travel & Ticketing -->
+                    <div onclick="openModal('Travel & Ticketing', '✈️', 'Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel for clients.', {facebook: 'https://facebook.com/SSGTravel'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-airplane text-2xl"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Travel & Ticketing</h3>
+                        <p class="text-sm text-charcoal/80 line-clamp-3">Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel...</p>
+                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. News & Updates Section (Placeholder) -->
+        <section id="news" class="py-16 md:py-24 bg-primary-dark-blue/5">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
+                    News & Insights
+                </h2>
+                <p class="text-center text-charcoal max-w-3xl mx-auto mb-16">
+                    Stay up-to-date with our latest projects, community initiatives, and press releases across all our sectors.
+                </p>
+
+                <!-- Placeholder Articles -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                        <img src="https://placehold.co/400x250/F5F5F5/B8860B?text=CONSTRUCTION" alt="News Image" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold uppercase text-copper-gold">Construction</span>
+                            <h3 class="text-lg font-bold text-primary-dark-blue mt-1 mb-3">SSG Completes New Monrovian Commercial Complex</h3>
+                            <p class="text-sm text-charcoal/80">Our engineering subsidiary successfully handed over a landmark project, setting new standards for quality in Liberia...</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                        <img src="https://placehold.co/400x250/F5F5F5/B8860B?text=HEALTH+CSR" alt="News Image" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold uppercase text-copper-gold">CSR & Health</span>
+                            <h3 class="text-lg font-bold text-primary-dark-blue mt-1 mb-3">Community Health Drive: SSG Donates Medical Supplies</h3>
+                            <p class="text-sm text-charcoal/80">Supporting local communities remains central to our mission. This week's drive focused on essential health resources...</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                        <img src="https://placehold.co/400x250/F5F5F5/B8860B?text=LOGISTICS" alt="News Image" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold uppercase text-copper-gold">Logistics</span>
+                            <h3 class="text-lg font-bold text-primary-dark-blue mt-1 mb-3">Expanding Our Fleet: New Auto and Logistics Capacity</h3>
+                            <p class="text-sm text-charcoal/80">We have invested in state-of-the-art vehicles to enhance our logistics and auto repair services...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6. Contact Us Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
+                    Get In Touch
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Contact Form Column -->
+                    <div class="bg-primary-dark-blue/5 p-6 md:p-10 rounded-xl shadow-xl border border-primary-dark-blue/10">
+                        <h3 class="text-2xl font-semibold mb-6 text-primary-dark-blue">Send an Inquiry</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-charcoal mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg border border-primary-dark-blue/20 focus:outline-none focus:ring-2 focus:ring-copper-gold transition-shadow">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-charcoal mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-primary-dark-blue/20 focus:outline-none focus:ring-2 focus:ring-copper-gold transition-shadow">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-sm font-medium text-charcoal mb-2">Subject (e.g., Partnership, Security Services)</label>
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full px-4 py-3 rounded-lg border border-primary-dark-blue/20 focus:outline-none focus:ring-2 focus:ring-copper-gold transition-shadow">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-charcoal mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-4 py-3 rounded-lg border border-primary-dark-blue/20 focus:outline-none focus:ring-2 focus:ring-copper-gold transition-shadow"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 text-primary-dark-blue font-bold rounded-lg uppercase tracking-wider ssg-shining-btn">
+                                Send Inquiry
+                            </button>
+                            <p id="form-message" class="mt-4 text-center text-green-600 font-semibold hidden">Thank you! Your message has been sent.</p>
+                        </form>
+                    </div>
+
+                    <!-- Contact Details Column -->
+                    <div class="space-y-8 p-6 md:p-10 rounded-xl bg-primary-dark-blue text-white shadow-xl">
+                        <h3 class="text-2xl font-semibold mb-6 ssg-shining-text">SSG Contact Information</h3>
+
+                        <!-- Address -->
+                        <div>
+                            <div class="flex items-center text-copper-gold mb-2">
+                                <i class="ph ph-map-pin-line text-2xl mr-3"></i>
+                                <span class="font-semibold text-lg">Our Headquarters</span>
+                            </div>
+                            <p class="text-silver-tagline">Manyoungar Broad Street | Chubor Old Road</p>
+                            <p class="text-silver-tagline">Montserrado County, Republic of Liberia</p>
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <div class="flex items-center text-copper-gold mb-2">
+                                <i class="ph ph-phone text-2xl mr-3"></i>
+                                <span class="font-semibold text-lg">Call Us</span>
+                            </div>
+                            <p class="text-white">+231 776 936 941</p>
+                            <p class="text-white">+231 886 560 249</p>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <div class="flex items-center text-copper-gold mb-2">
+                                <i class="ph ph-envelope-simple text-2xl mr-3"></i>
+                                <span class="font-semibold text-lg">Email Us</span>
+                            </div>
+                            <p class="text-white">shinningstarg22@gmail.com</p>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div>
+                            <div class="flex items-center text-copper-gold mb-3">
+                                <i class="ph ph-share-network text-2xl mr-3"></i>
+                                <span class="font-semibold text-lg">Connect</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://facebook.com/ssglib" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-facebook-logo text-3xl"></i></a>
+                                <a href="https://instagram.com/ssglib" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-instagram-logo text-3xl"></i></a>
+                                <a href="https://twitter.com/ssglib" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-twitter-logo text-3xl"></i></a>
+                                <a href="https://linkedin.com/SSG" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-linkedin-logo text-3xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/231776936941" target="_blank" class="fixed-floating-button fixed bottom-6 right-6 z-40 flex items-center group">
+        <!-- Floating Circle Icon (Always Visible) -->
+        <div class="whatsapp-icon-circle bg-whatsapp p-3 rounded-full shadow-lg transition-all duration-300 w-14 h-14 flex items-center justify-center whatsapp-pulse">
+            <!-- Official WhatsApp SVG Icon -->
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.039 2C6.54 2 2 6.54 2 12.039c0 2.227.747 4.303 2.039 5.968L2.031 22l4.135-1.079A9.957 9.957 0 0012.039 22c5.499 0 9.972-4.473 9.972-9.972C22.011 6.54 17.538 2 12.039 2zM17.152 16.577c-.1.218-.21.435-.453.644-.243.209-.545.385-.895.53-.35.144-.755.242-1.21.295-.455.053-.945.053-1.47 0-.525-.053-1.015-.151-1.47-.295-.455-.144-.86-.321-1.21-.53-.35-.209-.6-.426-.7-.644s-.043-.455.101-.735c.144-.28.32-.486.53-.614.209-.128.452-.164.732-.08.28.084.54.26.784.47.243.209.435.452.579.732s.226.54.226.895c0 .355-.101.658-.305.901-.204.243-.426.435-.67.579-.243.144-.54.226-.889.243-.349.017-.658-.02-.925-.118-.266-.097-.5-.226-.7-.385-.2-.16-.36-.36-.486-.6-.128-.243-.226-.51-.295-.801-.069-.292-.094-.614-.076-.963.017-.349.088-.693.213-1.031.125-.338.29-.658.496-.957.206-.298.44-.575.698-.827.258-.252.535-.47.835-.658.3-.188.62-.338.963-.455.342-.118.67-.179.983-.185.312-.006.634.024.966.09.332.066.637.218.915.455.278.237.5.53.66.885.16.355.25.753.268 1.206.018.453-.024.935-.125 1.448s-.243.99-.486 1.488z"/>
+            </svg>
+        </div>
+        <!-- Contrasting Label (Hidden on mobile) -->
+        <div class="hidden md:block ml-3 px-4 py-2 bg-primary-dark-blue rounded-full shadow-lg group-hover:bg-primary-dark-blue/80 transition-colors duration-300 border border-transparent group-hover:border-copper-gold">
+            <span class="text-sm font-semibold ssg-shining-text">Chat on WhatsApp</span>
+        </div>
+    </a>
+
+
+    <!-- Footer -->
+    <footer class="deep-blue-textured bg-primary-dark-blue py-12 md:py-16 text-white border-t-8 border-copper-gold">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b border-white/10 pb-8 mb-8">
+                <!-- Group Identity -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-3 ssg-shining-text">SSG</h3>
+                    <p class="text-sm text-silver-tagline mb-4">Building Trust Across Every Sector.</p>
+                    <p class="text-xs text-white/50">&copy; 2025 Shining Star Group</p>
+                    <p class="text-xs text-white/50">All Rights Reserved.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-copper-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-shining-accent transition-colors">About Us</a></li>
+                        <li><a href="#leadership" class="hover:text-shining-accent transition-colors">Leadership</a></li>
+                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Our Portfolio</a></li>
+                        <li><a href="#news" class="hover:text-shining-accent transition-colors">News & CSR</a></li>
+                        <li><a href="#contact" class="hover:text-shining-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sectors -->
+                <div class="hidden lg:block">
+                    <h4 class="text-lg font-semibold mb-4 text-copper-gold">Key Sectors</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Construction</a></li>
+                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Security Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Health & Insurance</a></li>
+                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Logistics & Auto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="text-lg font-semibold mb-4 text-copper-gold">Connect</h4>
+                    <ul class="space-y-2 text-sm text-silver-tagline">
+                        <li><i class="ph ph-envelope-simple text-sm mr-2 text-copper-gold"></i> shinningstarg22@gmail.com</li>
+                        <li><i class="ph ph-phone text-sm mr-2 text-copper-gold"></i> +231 776 936 941</li>
+                        <li><i class="ph ph-map-pin-line text-sm mr-2 text-copper-gold"></i> Montserrado County, Liberia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Icons at the bottom -->
+            <div class="flex justify-center space-x-6">
+                <a href="https://facebook.com/ssglib" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                <a href="https://instagram.com/ssglib" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                <a href="https://twitter.com/ssglib" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                <a href="https://linkedin.com/SSG" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // === Global Variables ===
+        const mobileMenu = document.getElementById('mobile-menu');
+        const subsidiaryModal = document.getElementById('subsidiary-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalTitle = document.getElementById('modal-title');
+        const modalOverview = document.getElementById('modal-overview');
+        const modalSocials = document.getElementById('modal-socials');
+
+        // === Navigation & Menu Functions ===
+
+        // Function to handle mobile menu visibility
+        function toggleMobileMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling on body
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // === Subsidiary Modal Functions ===
+
+        // Function to open the subsidiary details modal
+        function openModal(title, icon, overview, socials) {
+            modalTitle.innerHTML = `${icon} ${title}`;
+            modalOverview.textContent = overview;
+            
+            // Clear previous social links
+            modalSocials.innerHTML = '';
+
+            // Inject social links
+            if (socials.facebook) {
+                modalSocials.innerHTML += `<a href="${socials.facebook}" target="_blank" class="flex items-center text-primary-dark-blue hover:text-copper-gold transition-colors font-medium"><i class="ph-fill ph-facebook-logo text-xl mr-2"></i> Facebook Page</a>`;
+            }
+            if (socials.instagram) {
+                modalSocials.innerHTML += `<a href="${socials.instagram}" target="_blank" class="flex items-center text-primary-dark-blue hover:text-copper-gold transition-colors font-medium"><i class="ph-fill ph-instagram-logo text-xl mr-2"></i> Instagram Page</a>`;
+            }
+            if (socials.linkedin) {
+                modalSocials.innerHTML += `<a href="${socials.linkedin}" target="_blank" class="flex items-center text-primary-dark-blue hover:text-copper-gold transition-colors font-medium"><i class="ph-fill ph-linkedin-logo text-xl mr-2"></i> LinkedIn Profile</a>`;
+            }
+            
+            // Show modal
+            subsidiaryModal.classList.remove('hidden');
+            setTimeout(() => {
+                subsidiaryModal.classList.remove('opacity-0');
+                modalContent.classList.remove('opacity-0', 'scale-95');
+                modalContent.classList.add('opacity-100', 'scale-100');
+                document.body.style.overflow = 'hidden';
+            }, 10);
+        }
+
+        // Function to close the subsidiary details modal
+        function closeModal() {
+            modalContent.classList.remove('opacity-100', 'scale-100');
+            modalContent.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                subsidiaryModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        subsidiaryModal.addEventListener('click', (e) => {
+            if (e.target === subsidiaryModal) {
+                closeModal();
+            }
+        });
+
+        // === Contact Form Submission Handler ===
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            
+            // Simple submission simulation: In a real app, this would be an AJAX call to a server endpoint.
+            console.log("Form submitted. Data:", {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+
+
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            });
+
+            // Show success message
+            formMessage.classList.remove('hidden');
+            formMessage.textContent = "Thank you! Your message has been sent successfully.";
+
+            // Reset form and hide message after a few seconds
+            setTimeout(() => {
+                document.getElementById('contact-form').reset();
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+
+        
+         let currentSlide = 0;
+
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    // Function to update the slide position
+    function updateSlidePosition() {
+        const slidesContainer = document.querySelector('.slides');
+        slidesContainer.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    }
+
+    // Function to go to the next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlidePosition();
+    }
+
+    // Event listeners for navigation buttons
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+    });
+
+    // Automatic slide change every 1 second (1000 milliseconds)
+    setInterval(nextSlide, 3000);
+    </script>
+  
+
+</body>
+</html>

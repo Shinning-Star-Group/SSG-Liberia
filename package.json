@@ -1,0 +1,20 @@
+{
+  "name": "shining-star-group-of-companies-ssg-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBCDESING/Shining-Star-Group-of-Companies-SSG-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JBCDESING/Shining-Star-Group-of-Companies-SSG-/issues"
+  },
+  "homepage": "https://github.com/JBCDESING/Shining-Star-Group-of-Companies-SSG-#readme"
+}
