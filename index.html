@@ -94,12 +94,14 @@
     width: 100%;
     height: 100%;
 }
-/* */
-.ssg-shining-text {
+
+.moving-text {
     display: inline-block; /* Make the span an inline-block for animation */
-    animation: moveRight 5s linear infinite; /* Apply the animation */
+    color: #DAA520; /* Set the gold color */
+     animation: moveRight 8s linear infinite, shine 1.5s linear infinite; /* Apply the animation */
     white-space: nowrap; /* Prevent text wrapping */
 }
+
 
 /* Keyframes for moving text */
 @keyframes moveRight {
@@ -116,10 +118,13 @@
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 639px) {
-    .ssg-shining-text {
-        animation: moveRight 4s linear infinite; /* Faster animation on mobile */
+/* Keyframes for shining effect */
+@keyframes shine {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 1);
     }
 }
 
@@ -182,11 +187,12 @@
     <!-- Main Navigation Header -->
     <header class="sticky top-0 z-30 bg-primary-dark-blue shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-         <!-- Logo Area -->
+<!-- Logo Area -->
 <a href="#home" class="flex items-center space-x-2">
     <img src="./Public/IMAGE/SSG(LOGO)/SHINING LOGO jpeg.jpg" alt="Shining Star Group Logo" class="h-10 w-10 object-cover rounded-full">
-    <span class="ssg-shining-text text-lg font-semibold tracking-wider">Shinning Star Group of Companies SSG</span>
+    <span class="moving-text text-lg font-semibold tracking-wider">Shinning Star Group of Companies (SSG)</span>
 </a>
+
 
 
 
@@ -235,8 +241,8 @@
     <!-- HOME PAGE -->
     <section id="page-home" class="page-content deep-blue-textured p-6 md:p-10 rounded-xl bg-primary-dark-blue text-white" data-title="Home Page">
         <div class="bg-primary-dark-blue/5 p-6 md:p-10 rounded-xl shadow-xl border border-primary-dark-blue/10 mb-12">
-              <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
-                The Shinning Star Group of Companies (SSG)
+              <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center moving-text">
+                The Shinning Star Group of Companies (SSG)<br>
                 "Building Trust Across Every Sector"
                 </h2>
             <p class="text-lg md:text-xl font-light max-w-4xl">
