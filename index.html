@@ -94,22 +94,33 @@
     width: 100%;
     height: 100%;
 }
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* */
+.ssg-shining-text {
+    display: inline-block; /* Make the span an inline-block for animation */
+    animation: moveRight 5s linear infinite; /* Apply the animation */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
-.slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
+/* Keyframes for moving text */
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 1; /* Fade in */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+        opacity: 0; /* Fade out */
+    }
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Responsive adjustments */
+@media (max-width: 639px) {
+    .ssg-shining-text {
+        animation: moveRight 4s linear infinite; /* Faster animation on mobile */
+    }
 }
 
     </style>
@@ -171,13 +182,14 @@
     <!-- Main Navigation Header -->
     <header class="sticky top-0 z-30 bg-primary-dark-blue shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo Area -->
-            <a href="#home" class="flex items-center space-x-2">
-                <!-- Placeholder Image Logo reflecting Midnight Blue and Gold branding -->
-                <img src="./Public/IMAGE/SSG(LOGO)/SHINING LOGO png.png" alt="Shining Star Group Logo" class="h-10 w-auto object-contain">
-                <!-- Full Name -->
-                <span class="hidden sm:inline text-lg font-semibold ssg-shining-text tracking-wider">Shinning Star Group (SSG)</span>
-            </a>
+         <!-- Logo Area -->
+<a href="#home" class="flex items-center space-x-2">
+    <img src="./Public/IMAGE/SSG(LOGO)/SHINING LOGO jpeg.jpg" alt="Shining Star Group Logo" class="h-10 w-10 object-cover rounded-full">
+    <span class="ssg-shining-text text-lg font-semibold tracking-wider">Shinning Star Group of Companies SSG</span>
+</a>
+
+
+
 
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex space-x-6 lg:space-x-10">
