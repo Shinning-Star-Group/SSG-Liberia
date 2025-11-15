@@ -366,101 +366,155 @@
                 </div>
             </div>
         </section>
+<!-- 4. Portfolio/Subsidiaries Section -->
+<section id="portfolio" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shining-text">
+            Our Diversified Subsidiaries
+        </h2>
+        <p class="text-lg text-charcoal text-center max-w-3xl mx-auto mb-16">
+            SSG operates across 10 vital sectors, delivering quality, reliable, and people-centered services that drive national development.
+        </p>
 
-        <!-- 4. Portfolio/Subsidiaries Section -->
-        <section id="portfolio" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shining-text">
-                    Our Diversified Subsidiaries
-                </h2>
-                <p class="text-lg text-charcoal text-center max-w-3xl mx-auto mb-16">
-                    SSG operates across 10 vital sectors, delivering quality, reliable, and people-centered services that drive national development.
-                </p>
-
-                <!-- Subsidiary Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Construction & Engineering -->
-                    <div onclick="openModal('Construction & Engineering', '🏗️', 'Focusing on reliable infrastructure development, from commercial building to public works. We ensure quality, safety, and timely project delivery, using innovative methods to support Liberia\'s growth.', {facebook: 'https://facebook.com/SSGConstruction', linkedin: 'https://linkedin.com/SSGConstruction'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-hammer text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Construction & Engineering</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Focusing on reliable infrastructure development, from commercial building to public works...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Security & Safety Services -->
-                    <div onclick="openModal('Security & Safety Services', '🛡️', 'Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting. Building trust, one client at a time.', {facebook: 'https://facebook.com/SSGSecurity'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shield text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Security & Safety Services</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Health & Insurance Services -->
-                    <div onclick="openModal('Health & Insurance Services', '🏥', 'Committed to community well-being by offering accessible health services and comprehensive insurance packages for families and corporations.', {instagram: 'https://instagram.com/SSGHealth'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-heartbeat text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Health & Insurance Services</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Committed to community well-being by offering accessible health services and comprehensive insurance packages...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Printing, Media & Visibility -->
-                    <div onclick="openModal('Printing, Media & Visibility Consultancy', '🖨️', 'Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy to make your brand shine.', {facebook: 'https://facebook.com/SSGMedia'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-newspaper text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Printing, Media & Visibility</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Auto Repairs, Sales, Shipping & Logistics -->
-                    <div onclick="openModal('Auto Repairs, Sales, Shipping & Logistics', '🚗', 'Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport of goods and vehicles.', {facebook: 'https://facebook.com/SSGAuto'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-truck text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Auto Repairs, Sales, Shipping & Logistics</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Education & Vocational Training -->
-                    <div onclick="openModal('Education & Vocational Training', '🎓', 'Empowering the next generation with practical skills and high-quality vocational education necessary for national capacity building.', {facebook: 'https://facebook.com/SSGEducation'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-books text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Education & Vocational Training</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Empowering the next generation with practical skills and high-quality vocational education...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Mining, Waste Management, and Environmental Services -->
-                    <div onclick="openModal('Mining, Waste Management, and Environmental Services', '🌍', 'Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting services.', {facebook: 'https://facebook.com/SSGMining'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-leaf-bold text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mining & Environmental</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Mineral Water Production -->
-                    <div onclick="openModal('Mineral Water Production', '💧', 'Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.', {facebook: 'https://facebook.com/SSGWater'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-drop text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mineral Water Production</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- General Merchandise -->
-                    <div onclick="openModal('General Merchandise', '🛒', 'Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.', {facebook: 'https://facebook.com/SSGMerch'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shopping-bag text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">General Merchandise</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
-
-                    <!-- Travel & Ticketing -->
-                    <div onclick="openModal('Travel & Ticketing', '✈️', 'Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel for clients.', {facebook: 'https://facebook.com/SSGTravel'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                        <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-airplane text-2xl"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-copper-gold">Travel & Ticketing</h3>
-                        <p class="text-sm text-charcoal/80 line-clamp-3">Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel...</p>
-                        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                    </div>
+        <!-- Subsidiary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Construction & Engineering -->
+            <div onclick="openModal('Construction & Engineering', '🏗️', 'Focusing on reliable infrastructure development, from commercial building to public works. We ensure quality, safety, and timely project delivery, using innovative methods to support Liberia\'s growth.', {facebook: 'https://web.facebook.com/profile.php?id=61582571048631&sk=about', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-hammer text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Construction & Engineering</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Focusing on reliable infrastructure development, from commercial building to public works...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
                 </div>
             </div>
-        </section>
+
+         <!-- Security & Safety Services -->
+<div onclick="openModal('Security & Safety Services', '🛡️', 'Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting. We are officially operational with a certificate of private contract security, building trust one client at a time.', {facebook: 'https://web.facebook.com/profile.php?id=61582571048631&sk=about', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+    <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shield text-2xl"></i></div>
+    <h3 class="text-xl font-semibold mb-2 text-copper-gold">Security & Safety Services</h3>
+    <p class="text-sm text-charcoal/80 line-clamp-3">Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting. We are officially operational with a certificate of private contract security...</p>
+    <div class="mt-4">
+        <img src="./Public/IMAGE/Security & Safety Services official operational status.jpeg" alt="Certificate of Private Contract Security" class="w-full max-w-[300px] rounded-md shadow-md">
+        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+    </div>
+    <div class="flex space-x-3 mt-4">
+        <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+        <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+        <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+    </div>
+</div>
+
+            <!-- Health & Insurance Services -->
+            <div onclick="openModal('Health & Insurance Services', '🏥', 'Committed to community well-being by offering accessible health services and comprehensive insurance packages for families and corporations.', {facebook: 'https://facebook.com/SSGHealth', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-heartbeat text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Health & Insurance Services</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Committed to community well-being by offering accessible health services and comprehensive insurance packages...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Printing, Media & Visibility -->
+            <div onclick="openModal('Printing, Media & Visibility Consultancy', '🖨️', 'Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy to make your brand shine.', {facebook: 'https://facebook.com/SSGMedia', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-newspaper text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Printing, Media & Visibility</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Auto Repairs, Sales, Shipping & Logistics -->
+            <div onclick="openModal('Auto Repairs, Sales, Shipping & Logistics', '🚗', 'Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport of goods and vehicles.', {facebook: 'https://facebook.com/SSGAuto', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-truck text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Auto Repairs, Sales, Shipping & Logistics</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Education & Vocational Training -->
+            <div onclick="openModal('Education & Vocational Training', '🎓', 'Empowering the next generation with practical skills and high-quality vocational education necessary for national capacity building.', {facebook: 'https://facebook.com/SSGEducation', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-books text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Education & Vocational Training</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Empowering the next generation with practical skills and high-quality vocational education...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Mining, Waste Management, and Environmental Services -->
+            <div onclick="openModal('Mining, Waste Management, and Environmental Services', '🌍', 'Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting services.', {facebook: 'https://facebook.com/SSGMining', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-leaf-bold text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mining & Environmental</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Mineral Water Production -->
+            <div onclick="openModal('Mineral Water Production', '💧', 'Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.', {facebook: 'https://facebook.com/SSGWater', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-drop text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mineral Water Production</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- General Merchandise -->
+            <div onclick="openModal('General Merchandise', '🛒', 'Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.', {facebook: 'https://facebook.com/SSGMerch', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shopping-bag text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">General Merchandise</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Travel & Ticketing -->
+            <div onclick="openModal('Travel & Ticketing', '✈️', 'Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel for clients.', {facebook: 'https://facebook.com/SSGTravel', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-airplane text-2xl"></i></div>
+                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Travel & Ticketing</h3>
+                <p class="text-sm text-charcoal/80 line-clamp-3">Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel...</p>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <div class="flex space-x-3 mt-4">
+                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- 5. News & Updates Section (Placeholder) -->
         <section id="news" class="py-16 md:py-24 bg-primary-dark-blue/5">
