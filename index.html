@@ -706,21 +706,6 @@
     </main>
     
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/+231886427519" target="_blank" class="fixed-floating-button fixed bottom-6 right-6 z-40 flex items-center group">
-        <!-- Floating Circle Icon (Always Visible) -->
-        <div class="whatsapp-icon-circle bg-whatsapp p-3 rounded-full shadow-lg transition-all duration-300 w-14 h-14 flex items-center justify-center whatsapp-pulse">
-            <!-- Official WhatsApp SVG Icon -->
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.039 2C6.54 2 2 6.54 2 12.039c0 2.227.747 4.303 2.039 5.968L2.031 22l4.135-1.079A9.957 9.957 0 0012.039 22c5.499 0 9.972-4.473 9.972-9.972C22.011 6.54 17.538 2 12.039 2zM17.152 16.577c-.1.218-.21.435-.453.644-.243.209-.545.385-.895.53-.35.144-.755.242-1.21.295-.455.053-.945.053-1.47 0-.525-.053-1.015-.151-1.47-.295-.455-.144-.86-.321-1.21-.53-.35-.209-.6-.426-.7-.644s-.043-.455.101-.735c.144-.28.32-.486.53-.614.209-.128.452-.164.732-.08.28.084.54.26.784.47.243.209.435.452.579.732s.226.54.226.895c0 .355-.101.658-.305.901-.204.243-.426.435-.67.579-.243.144-.54.226-.889.243-.349.017-.658-.02-.925-.118-.266-.097-.5-.226-.7-.385-.2-.16-.36-.36-.486-.6-.128-.243-.226-.51-.295-.801-.069-.292-.094-.614-.076-.963.017-.349.088-.693.213-1.031.125-.338.29-.658.496-.957.206-.298.44-.575.698-.827.258-.252.535-.47.835-.658.3-.188.62-.338.963-.455.342-.118.67-.179.983-.185.312-.006.634.024.966.09.332.066.637.218.915.455.278.237.5.53.66.885.16.355.25.753.268 1.206.018.453-.024.935-.125 1.448s-.243.99-.486 1.488z"/>
-            </svg>
-        </div>
-        <!-- Contrasting Label (Hidden on mobile) -->
-        <div class="hidden md:block ml-3 px-4 py-2 bg-primary-dark-blue rounded-full shadow-lg group-hover:bg-primary-dark-blue/80 transition-colors duration-300 border border-transparent group-hover:border-copper-gold">
-            <span class="text-sm font-semibold ssg-shining-text">Chat on WhatsApp</span>
-        </div>
-    </a>
-
 
     <!-- Footer -->
     <footer class="deep-blue-textured bg-primary-dark-blue py-12 md:py-16 text-white border-t-8 border-copper-gold">
@@ -777,6 +762,24 @@
             </div>
         </div>
     </footer>
+
+    
+    <!-- =================================== -->
+    <!--  NEW: Floating WhatsApp Button      -->
+    <!-- =================================== -->
+    <a href="https://wa.me/+231886427519?text=Hello%20Shining%20Star%20Group!" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat on WhatsApp" 
+       class="fixed z-40 bottom-6 right-6 md:bottom-8 md:right-8 
+              bg-whatsapp text-white p-4 rounded-full 
+              shadow-lg transition-all duration-300 ease-in-out
+              whatsapp-pulse
+              hover:scale-110 hover:shadow-xl hover:bg-whatsapp-hover">
+        
+        <!-- Using Phosphor icon (already loaded in your project) -->
+        <i class="ph ph-whatsapp-logo text-3xl block"></i>
+    </a>
 
     <script>
         // === Global Variables ===
