@@ -103,7 +103,6 @@
 }
 
 
-/* Keyframes for moving text */
 @keyframes moveRight {
     0% {
         transform: translateX(-100%); /* Start off-screen to the left */
@@ -118,7 +117,6 @@
     }
 }
 
-/* Keyframes for shining effect */
 @keyframes shine {
     0%, 100% {
         text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.5);
@@ -193,10 +191,6 @@
     <span class="moving-text text-lg font-semibold tracking-wider">Shinning Star Group of Companies (SSG)</span>
 </a>
 
-
-
-
-
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex space-x-6 lg:space-x-10">
                 <a href="#about" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">About Us</a>
@@ -267,139 +261,29 @@
         </div>
     </section>
     
-    <section id="portfolio" class="pt-12">
-        </section>
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shining-text">
+                Our Diversified Subsidiaries
+            </h2>
+            <p class="text-lg text-charcoal text-center max-w-3xl mx-auto mb-16">
+                SSG operates across 10 vital sectors, delivering quality, reliable, and people-centered services that drive national development.
+            </p>
 
-</main>
-
-        <!-- Quick Facts Overview -->
-        <section class="bg-white py-12 shadow-inner">
-            <div class="container mx-auto px-4 text-center">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-4">
-                        <p class="text-5xl font-extrabold mb-2 ssg-shining-text">10+</p>
-                        <p class="text-lg font-medium text-primary-dark-blue">Diverse Sectors</p>
-                    </div>
-                    <div class="p-4">
-                        <p class="text-5xl font-extrabold mb-2 ssg-shining-text">Liberia</p>
-                        <p class="text-lg font-medium text-primary-dark-blue">100% Liberian Owned</p>
-                    </div>
-                    <div class="p-4">
-                        <p class="text-5xl font-extrabold mb-2 ssg-shining-text">2022</p>
-                        <p class="text-lg font-medium text-primary-dark-blue">Founded</p>
+            <!-- Subsidiary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Construction & Engineering -->
+                <div onclick="openModal('Construction & Engineering', '🏗️', 'Focusing on reliable infrastructure development, from commercial building to public works. We ensure quality, safety, and timely project delivery, using innovative methods to support Liberia\\'s growth.', {facebook: 'https://web.facebook.com/profile.php?id=61582571048631&sk=about', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+                    <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-hammer text-2xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-copper-gold">Construction & Engineering</h3>
+                    <p class="text-sm text-charcoal/80 line-clamp-3">Focusing on reliable infrastructure development, from commercial building to public works...</p>
+                    <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
+                        <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- 2. About Us Section -->
-        <section id="about" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
-                    About The Group
-                </h2>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Overview and Mission -->
-                    <div class="bg-primary-dark-blue/5 p-6 md:p-10 rounded-xl shadow-lg">
-                        <h3 class="text-2xl font-semibold mb-4 text-primary-dark-blue">Overview & Mission</h3>
-                        <p class="mb-4 text-charcoal leading-relaxed">
-                            Founded in July 2022 and proudly 100% Liberian-owned, SSG is a dynamic business conglomerate headquartered in Chubor, Montserrado County. Our mission is to empower communities and drive national development through reliable, quality, and affordable services across a wide range of sectors.
-                        </p>
-                        <p class="text-charcoal leading-relaxed font-medium">
-                            We are committed to delivering trustworthy, innovative, and people-centered services that improve lives and build national capacity.
-                        </p>
-                    </div>
-
-                    <!-- Vision, Values & Promise -->
-                    <div class="space-y-6">
-                        <!-- Vision -->
-                        <div class="p-6 rounded-xl border border-copper-gold/50 bg-white shadow-md">
-                            <h3 class="text-2xl font-semibold mb-3 text-copper-gold flex items-center"><i class="ph ph-eye text-3xl mr-3"></i> Our Vision</h3>
-                            <p class="text-charcoal">To be Liberia's most trusted and diversified business group—a shining example of integrity, innovation, and excellence.</p>
-                        </div>
-                        <!-- Promise -->
-                        <div class="p-6 rounded-xl border border-copper-gold/50 bg-white shadow-md">
-                            <h3 class="text-2xl font-semibold mb-3 text-copper-gold flex items-center"><i class="ph ph-handshake text-3xl mr-3"></i> Our Promise</h3>
-                            <p class="text-charcoal">We promise to deliver trustworthy, innovative, and people-centered services that improve lives and build national capacity.</p>
-                        </div>
-                        <!-- Values -->
-                        <div class="p-6 rounded-xl border border-copper-gold/50 bg-white shadow-md">
-                            <h3 class="text-2xl font-semibold mb-3 text-copper-gold flex items-center"><i class="ph ph-star text-3xl mr-3"></i> Core Values</h3>
-                            <p class="text-charcoal font-medium">Integrity, Quality, Community Impact, and Innovation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Leadership/Board Section (Deep Blue Background) -->
-        <section id="leadership" class="deep-blue-textured py-16 md:py-24 bg-primary-dark-blue text-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
-                    Leadership & Governance
-                </h2>
-                <p class="text-center text-silver-tagline max-w-3xl mx-auto mb-16">
-                    Our foundation is built on strong governance, unified brand architecture, and a commitment to operational excellence guided by experienced leaders.
-                </p>
-
-                <!-- Updated Leadership Cards -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- General Manager: Heston M. Jackson,II. -->
-                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
-                        <img src="/Public/IMAGE/Heston M. Jackson,.jpg" alt="General Manager Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
-                        <h3 class="text-xl font-semibold ssg-shining-text">Heston M. Jackson, II.</h3>
-                        <p class="text-sm font-light text-silver-tagline mb-2">General Manager</p>
-                        <p class="text-xs italic text-white/70">"Driving the vision for a brighter Liberia."</p>
-                    </div>
-                    <!-- COO: Emmanuel Freeman -->
-                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
-                        <img src="./Public/IMAGE/Emmanuel Freeman (COO).jpeg" alt="COO Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
-                        <h3 class="text-xl font-semibold ssg-shining-text">Emmanuel C.Freeman</h3>
-                        <p class="text-sm font-light text-silver-tagline mb-2">Chief Operations Officer (COO)</p>
-                        <p class="text-xs italic text-white/70">"Ensuring operational excellence across all sectors."</p>
-                    </div>
-                    <!-- CFO: Justin Harris -->
-                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
-                        <img src="/Public/IMAGE/Justin Harris.jpeg" alt="CFO Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
-                        <h3 class="text-xl font-semibold ssg-shining-text">Justin Harris</h3>
-                        <p class="text-sm font-light text-silver-tagline mb-2">Chief Financial Officer (CFO)</p>
-                        <p class="text-xs italic text-white/70">"Sustaining growth with integrity."</p>
-                    </div>
-                    <!-- HR: Tenizee Baryogar -->
-                    <div class="text-center bg-white/5 p-6 rounded-xl shadow-lg border border-copper-gold/30 hover:bg-white/10 transition-colors duration-300">
-                        <img src="/Public/IMAGE/Tenizee Baryogar(HR).jpeg" alt="HR Placeholder" class="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-4 border-copper-gold">
-                        <h3 class="text-xl font-semibold ssg-shining-text">Tenizee Baryogar</h3>
-                        <p class="text-sm font-light text-silver-tagline mb-2">Head of HR & Admin</p>
-                        <p class="text-xs italic text-white/70">"Our people are our greatest star."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- 4. Portfolio/Subsidiaries Section -->
-<section id="portfolio" class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shining-text">
-            Our Diversified Subsidiaries
-        </h2>
-        <p class="text-lg text-charcoal text-center max-w-3xl mx-auto mb-16">
-            SSG operates across 10 vital sectors, delivering quality, reliable, and people-centered services that drive national development.
-        </p>
-
-        <!-- Subsidiary Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Construction & Engineering -->
-            <div onclick="openModal('Construction & Engineering', '🏗️', 'Focusing on reliable infrastructure development, from commercial building to public works. We ensure quality, safety, and timely project delivery, using innovative methods to support Liberia\'s growth.', {facebook: 'https://web.facebook.com/profile.php?id=61582571048631&sk=about', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-                <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-hammer text-2xl"></i></div>
-                <h3 class="text-xl font-semibold mb-2 text-copper-gold">Construction & Engineering</h3>
-                <p class="text-sm text-charcoal/80 line-clamp-3">Focusing on reliable infrastructure development, from commercial building to public works...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
-                <div class="flex space-x-3 mt-4">
-                    <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
-                    <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
-                    <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-facebook-logo text-xl"></i></a>
-                </div>
-            </div>
 
          <!-- Security & Safety Services -->
 <div onclick="openModal('Security & Safety Services', '🛡️', 'Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting. We are officially operational with a certificate of private contract security, building trust one client at a time.', {facebook: 'https://web.facebook.com/profile.php?id=61582571048631&sk=about', linkedin: 'https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/', instagram: 'https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh'})" class="cursor-pointer bg-white p-6 rounded-xl shadow-lg border-t-4 border-copper-gold hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
@@ -521,10 +405,9 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-     <!-- 5. News & Updates Section (Placeholder) -->
+    </section>
+    
+    <!-- 5. News & Updates Section (Placeholder) -->
       <section id="news" class="py-16 md:py-24 bg-primary-dark-blue/5">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center ssg-shining-text text-primary-dark-blue">
@@ -703,11 +586,9 @@
                 </div>
             </div>
         </section>
-    </main>
-    
 
-
-    <!-- Footer -->
+</main>
+     <!-- Footer -->
     <footer class="deep-blue-textured bg-primary-dark-blue py-12 md:py-16 text-white border-t-8 border-copper-gold">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b border-white/10 pb-8 mb-8">
@@ -746,7 +627,8 @@
                 <div class="col-span-2 md:col-span-1">
                     <h4 class="text-lg font-semibold mb-4 text-copper-gold">Connect</h4>
                     <ul class="space-y-2 text-sm text-silver-tagline">
-                        <li><i class="ph ph-envelope-simple text-sm mr-2 text-copper-gold"></i> shinningstarg22@gmail.com</li><i>shinningstargroup247@gmail.com</i>
+                        <li><i class="ph ph-envelope-simple text-sm mr-2 text-copper-gold"></i> shinningstarg22@gmail.com</li>
+                        <li><i class="ph ph-envelope-simple text-sm mr-2 text-copper-gold"></i> shinningstargroup247@gmail.com</li>
                         <li><i class="ph ph-phone text-sm mr-2 text-copper-gold"></i> +231 776 936 941</li>
                         <li><i class="ph ph-map-pin-line text-sm mr-2 text-copper-gold"></i> Montserrado County, Liberia</li>
                     </ul>
@@ -830,6 +712,7 @@
             // Show modal
             subsidiaryModal.classList.remove('hidden');
             setTimeout(() => {
+                // ensure classes on modal and content for animation
                 subsidiaryModal.classList.remove('opacity-0');
                 modalContent.classList.remove('opacity-0', 'scale-95');
                 modalContent.classList.add('opacity-100', 'scale-100');
@@ -906,7 +789,7 @@
         updateSlidePosition();
     });
 
-    // Automatic slide change every 1 second (1000 milliseconds)
+    // Automatic slide change every 3 seconds
     setInterval(nextSlide, 3000);
     </script>
   
