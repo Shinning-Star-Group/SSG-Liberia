@@ -17,36 +17,36 @@
         :root {
             --midnight-blue: #003366;
             --copper-gold: #B8860B;
-            --shining-accent: #FFD700;
+            --shinning-accent: #FFD700;
             --charcoal: #333333;
             --whatsapp-green: #25D366; 
             --whatsapp-hover: #25D366; /* Using same color as base for the requested consistent color */
         }
 
         /* Tailwind Configuration */
-        .ssg-shining-text {
+        .ssg-shinning-text {
             /* Text gradient for metallic look */
-            background: linear-gradient(180deg, var(--shining-accent) 20%, var(--copper-gold) 80%);
+            background: linear-gradient(180deg, var(--shinning-accent) 20%, var(--copper-gold) 80%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             /* Subtle text shadow for glow */
             text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
 
-        .ssg-shining-btn {
-            background: linear-gradient(145deg, var(--shining-accent), var(--copper-gold));
+        .ssg-shinning-btn {
+            background: linear-gradient(145deg, var(--shinning-accent), var(--copper-gold));
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
-            border: 1px solid var(--shining-accent);
+            border: 1px solid var(--shinning-accent);
         }
 
-        .ssg-shining-btn:hover {
+        .ssg-shinning-btn:hover {
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.8);
             transform: translateY(-2px);
         }
 
         .ssg-nav-link-gold:hover {
-            text-shadow: 0 0 10px var(--shining-accent);
+            text-shadow: 0 0 10px var(--shinning-accent);
         }
 
         /* Texture for Deep Blue Sections (Hero, Leadership, Footer) */
@@ -134,7 +134,7 @@
                     colors: {
                         'primary-dark-blue': 'var(--midnight-blue)',
                         'copper-gold': 'var(--copper-gold)',
-                        'shining-accent': 'var(--shining-accent)',
+                        'shinning-accent': 'var(--shinning-accent)',
                         'charcoal': 'var(--charcoal)',
                         'whatsapp': 'var(--whatsapp-green)',
                         'whatsapp-hover': 'var(--whatsapp-hover)',
@@ -152,16 +152,16 @@
     <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-primary-dark-blue/95 backdrop-blur-sm transition-opacity duration-300">
         <div class="h-full flex flex-col p-6">
             <div class="flex justify-end">
-                <button onclick="toggleMobileMenu()" class="text-white hover:text-shining-accent">
+                <button onclick="toggleMobileMenu()" class="text-white hover:text-shinning-accent">
                     <i class="ph ph-x-circle text-3xl"></i>
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 mt-8">
-                <a href="#about" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">About Us</a>
-                <a href="#leadership" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">Leadership</a>
-                <a href="#portfolio" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">Portfolio</a>
-                <a href="#news" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">News</a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shining-text hover:ssg-shining-text transition-all duration-200">Contact</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shinning-text hover:ssg-shinning-text transition-all duration-200">About Us</a>
+                <a href="#leadership" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shinning-text hover:ssg-shinning-text transition-all duration-200">Leadership</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shinning-text hover:ssg-shinning-text transition-all duration-200">Portfolio</a>
+                <a href="#news" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shinning-text hover:ssg-shinning-text transition-all duration-200">News</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-3xl font-light ssg-shinning-text hover:ssg-shinning-text transition-all duration-200">Contact</a>
             </nav>
         </div>
     </div>
@@ -193,15 +193,15 @@
 
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex space-x-6 lg:space-x-10">
-                <a href="#about" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">About Us</a>
-                <a href="#leadership" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">Leadership</a>
-                <a href="#portfolio" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">Portfolio</a>
-                <a href="#news" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">News</a>
-                <a href="#contact" class="ssg-nav-link-gold font-medium ssg-shining-text hover:ssg-nav-link-gold transition duration-200">Contact</a>
+                <a href="#about" class="ssg-nav-link-gold font-medium ssg-shinning-text hover:ssg-nav-link-gold transition duration-200">About Us</a>
+                <a href="#leadership" class="ssg-nav-link-gold font-medium ssg-shinning-text hover:ssg-nav-link-gold transition duration-200">Leadership</a>
+                <a href="#portfolio" class="ssg-nav-link-gold font-medium ssg-shinning-text hover:ssg-nav-link-gold transition duration-200">Portfolio</a>
+                <a href="#news" class="ssg-nav-link-gold font-medium ssg-shinning-text hover:ssg-nav-link-gold transition duration-200">News</a>
+                <a href="#contact" class="ssg-nav-link-gold font-medium ssg-shinning-text hover:ssg-nav-link-gold transition duration-200">Contact</a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button onclick="toggleMobileMenu()" class="md:hidden text-shining-accent hover:text-white">
+            <button onclick="toggleMobileMenu()" class="md:hidden text-shinning-accent hover:text-white">
                 <i class="ph ph-list text-3xl"></i>
             </button>
         </div>
@@ -251,7 +251,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <button class="ssg-shining-btn bg-copper-gold hover:bg-[#A91219] text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.03]" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
+                <button class="ssg-shinning-btn bg-copper-gold hover:bg-[#A91219] text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.03]" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">
                     Explore Our Projects
                 </button>
                 <button class="bg-white hover:bg-gray-200 text-primary-dark-blue font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.03]" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
@@ -263,7 +263,7 @@
     
     <section id="portfolio" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shining-text">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center ssg-shinning-text">
                 Our Diversified Subsidiaries
             </h2>
             <p class="text-lg text-charcoal text-center max-w-3xl mx-auto mb-16">
@@ -277,7 +277,7 @@
                     <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-hammer text-2xl"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-copper-gold">Construction & Engineering</h3>
                     <p class="text-sm text-charcoal/80 line-clamp-3">Focusing on reliable infrastructure development, from commercial building to public works...</p>
-                    <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                    <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                     <div class="flex space-x-3 mt-4">
                         <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                         <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -292,7 +292,7 @@
     <p class="text-sm text-charcoal/80 line-clamp-3">Providing professional and reliable security solutions, including corporate guard services, risk assessment, and safety consulting. We are officially operational with a certificate of private contract security...</p>
     <div class="mt-4">
         <img src="./Public/IMAGE/Security & Safety Services official operational status.jpeg" alt="Certificate of Private Contract Security" class="w-full max-w-[300px] rounded-md shadow-md">
-        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+        <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
     </div>
     <div class="flex space-x-3 mt-4">
         <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
@@ -306,7 +306,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-heartbeat text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Health & Insurance Services</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Committed to community well-being by offering accessible health services and comprehensive insurance packages...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -319,7 +319,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-newspaper text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Printing, Media & Visibility</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Your full-service partner for branding, media placement, high-quality printing, and comprehensive visibility strategy...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -332,7 +332,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-truck text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Auto Repairs, Sales, Shipping & Logistics</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Comprehensive automotive care, vehicle sales, and expert logistics services ensuring smooth, reliable, and timely transport...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -345,7 +345,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-books text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Education & Vocational Training</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Empowering the next generation with practical skills and high-quality vocational education...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -358,7 +358,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-leaf-bold text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mining & Environmental</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Committed to responsible resource extraction, professional waste management, and sustainable environmental consulting...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -371,7 +371,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-drop text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Mineral Water Production</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Producing high-quality, clean, and safe mineral water to ensure community hydration and well-being.</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -384,7 +384,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-shopping-bag text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">General Merchandise</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Sourcing and supplying a wide range of essential goods and products, specializing in reliable procurement and distribution.</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -397,7 +397,7 @@
                 <div class="text-4xl mb-3 text-copper-gold flex items-center justify-center w-12 h-12 rounded-full bg-primary-dark-blue/10"><i class="ph ph-airplane text-2xl"></i></div>
                 <h3 class="text-xl font-semibold mb-2 text-copper-gold">Travel & Ticketing</h3>
                 <p class="text-sm text-charcoal/80 line-clamp-3">Offering reliable, affordable travel and ticketing services, ensuring smooth and hassle-free domestic and international travel...</p>
-                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shining-text">View Details →</span>
+                <span class="text-xs text-primary-dark-blue font-medium mt-3 inline-block hover:ssg-shinning-text">View Details →</span>
                 <div class="flex space-x-3 mt-4">
                     <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-linkedin-logo text-xl"></i></a>
                     <a href="https://www.instagram.com/shinning.star.group247?igsh=OG8ydW5lNmp3MTlh" target="_blank" class="text-copper-gold hover:text-primary-dark-blue"><i class="ph ph-instagram-logo text-xl"></i></a>
@@ -410,7 +410,7 @@
     <!-- 5. News & Updates Section (Placeholder) -->
       <section id="news" class="py-16 md:py-24 bg-primary-dark-blue/5">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center ssg-shining-text text-primary-dark-blue">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center ssg-shinning-text text-primary-dark-blue">
             News & Insights
         </h2>
         <p class="text-center text-charcoal max-w-3xl mx-auto mb-12">
@@ -498,7 +498,7 @@
         <!-- 6. Contact Us Section -->
         <section id="contact" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shining-text">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center ssg-shinning-text">
                     Get In Touch
                 </h2>
 
@@ -527,7 +527,7 @@
                                 <textarea id="message" name="message" rows="4" required
                                     class="w-full px-4 py-3 rounded-lg border border-primary-dark-blue/20 focus:outline-none focus:ring-2 focus:ring-copper-gold transition-shadow"></textarea>
                             </div>
-                            <button type="submit" class="w-full px-6 py-3 text-primary-dark-blue font-bold rounded-lg uppercase tracking-wider ssg-shining-btn">
+                            <button type="submit" class="w-full px-6 py-3 text-primary-dark-blue font-bold rounded-lg uppercase tracking-wider ssg-shinning-btn">
                                 Send Inquiry
                             </button>
                             <p id="form-message" class="mt-4 text-center text-green-600 font-semibold hidden">Thank you! Your message has been sent.</p>
@@ -536,7 +536,7 @@
 
                     <!-- Contact Details Column -->
                     <div class="space-y-8 p-6 md:p-10 rounded-xl bg-primary-dark-blue text-white shadow-xl">
-                        <h3 class="text-2xl font-semibold mb-6 ssg-shining-text">SSG Contact Information</h3>
+                        <h3 class="text-2xl font-semibold mb-6 ssg-shinning-text">SSG Contact Information</h3>
 
                         <!-- Address -->
                         <div>
@@ -576,10 +576,10 @@
                                 <span class="font-semibold text-lg">Connect</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-facebook-logo text-3xl"></i></a>
-                                <a href="https://www.instagram.com/shinning.star.group247/" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-instagram-logo text-3xl"></i></a>
-                                <a href="https://github.com/Shinning-Star-Group" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-twitter-logo text-3xl"></i></a>
-                                <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-linkedin-logo text-3xl"></i></a>
+                                <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-facebook-logo text-3xl"></i></a>
+                                <a href="https://www.instagram.com/shinning.star.group247/" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-instagram-logo text-3xl"></i></a>
+                                <a href="https://github.com/Shinning-Star-Group" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-twitter-logo text-3xl"></i></a>
+                                <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-linkedin-logo text-3xl"></i></a>
                             </div>
                         </div>
                     </div>
@@ -594,7 +594,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b border-white/10 pb-8 mb-8">
                 <!-- Group Identity -->
                 <div class="col-span-2 md:col-span-1">
-                    <h3 class="text-2xl font-bold mb-3 ssg-shining-text">SSG</h3>
+                    <h3 class="text-2xl font-bold mb-3 ssg-shinning-text">SSG</h3>
                     <p class="text-sm text-silver-tagline mb-4">Building Trust Across Every Sector.</p>
                     <p class="text-xs text-white/50">&copy; 2025 Shinning Star Group</p>
                     <p class="text-xs text-white/50">All Rights Reserved.</p>
@@ -604,11 +604,11 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-copper-gold">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#about" class="hover:text-shining-accent transition-colors">About Us</a></li>
-                        <li><a href="#leadership" class="hover:text-shining-accent transition-colors">Leadership</a></li>
-                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Our Portfolio</a></li>
-                        <li><a href="#news" class="hover:text-shining-accent transition-colors">News & CSR</a></li>
-                        <li><a href="#contact" class="hover:text-shining-accent transition-colors">Contact</a></li>
+                        <li><a href="#about" class="hover:text-shinning-accent transition-colors">About Us</a></li>
+                        <li><a href="#leadership" class="hover:text-shinning-accent transition-colors">Leadership</a></li>
+                        <li><a href="#portfolio" class="hover:text-shinning-accent transition-colors">Our Portfolio</a></li>
+                        <li><a href="#news" class="hover:text-shinning-accent transition-colors">News & CSR</a></li>
+                        <li><a href="#contact" class="hover:text-shinning-accent transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -616,10 +616,10 @@
                 <div class="hidden lg:block">
                     <h4 class="text-lg font-semibold mb-4 text-copper-gold">Key Sectors</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Construction</a></li>
-                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Security Services</a></li>
-                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Health & Insurance</a></li>
-                        <li><a href="#portfolio" class="hover:text-shining-accent transition-colors">Logistics & Auto</a></li>
+                        <li><a href="#portfolio" class="hover:text-shinning-accent transition-colors">Construction</a></li>
+                        <li><a href="#portfolio" class="hover:text-shinning-accent transition-colors">Security Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-shinning-accent transition-colors">Health & Insurance</a></li>
+                        <li><a href="#portfolio" class="hover:text-shinning-accent transition-colors">Logistics & Auto</a></li>
                     </ul>
                 </div>
 
@@ -637,10 +637,10 @@
 
             <!-- Social Media Icons at the bottom -->
             <div class="flex justify-center space-x-6">
-                <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
-                <a href="https://www.instagram.com/shinning.star.group247/" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
-                <a href="https://github.com/Shinning-Star-Group" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
-                <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-white hover:text-shining-accent transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=61582571048631&sk=about" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                <a href="https://www.instagram.com/shinning.star.group247/" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                <a href="https://github.com/Shinning-Star-Group" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/the-shinning-star-group-of-companies-ssg2022/" target="_blank" class="text-white hover:text-shinning-accent transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
             </div>
         </div>
     </footer>
@@ -747,8 +747,6 @@
             console.log("Form submitted. Data:", {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
-
-
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             });
