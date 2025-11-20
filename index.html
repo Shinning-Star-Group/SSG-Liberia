@@ -409,90 +409,142 @@
     
     <!-- 5. News & Updates Section (Placeholder) -->
       <section id="news" class="py-16 md:py-24 bg-primary-dark-blue/5">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center ssg-shinning-text text-primary-dark-blue">
-            News & Insights
-        </h2>
-        <p class="text-center text-charcoal max-w-3xl mx-auto mb-12">
-            Stay up-to-date with our latest projects, community initiatives, and press releases across all our sectors.
-        </p>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center ssg-shinning-text text-primary-dark-blue">
+      News & Insights
+    </h2>
+    <p class="text-center text-charcoal max-w-3xl mx-auto mb-12">
+      Stay up-to-date with our latest projects, community initiatives, and press releases across all our sectors.
+    </p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Main feature (video / latest article) -->
+      <main class="lg:col-span-2 space-y-8">
+        <article class="bg-white rounded-xl shadow-2xl overflow-hidden">
+          <div class="relative aspect-video">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/pfbPy_JKiCo?si=Isorfd2Hnz_tk5tD"
+              title="Behind the Build: Inauguration of the SSG Commercial Complex"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
 
-            <div class="lg:col-span-2">
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
-                    
-                    <div class="relative aspect-video">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full"
-                            src="https://www.youtube.com/embed/pfbPy_JKiCo?si=Isorfd2Hnz_tk5tD" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-
-                    <div class="p-8">
-                        <span class="text-sm font-semibold uppercase text-red-600 tracking-wider">LATEST VIDEO</span>
-                        <h3 class="text-3xl font-bold text-primary-dark-blue mt-2 mb-3">
-                            Behind the Build: Inauguration of the SSG Commercial Complex
-                        </h3>
-                        <p class="text-base text-charcoal/80 mb-5">
-                            Watch the official ceremony and a time-lapse of our flagship construction project. This video provides a look at the final stages and the official hand-over event.
-                        </p>
-                        <a href="http://www.youtube.com/watch?v=pfbPy_JKiCo" target="_blank" class="text-copper-gold font-semibold hover:text-primary-dark-blue transition duration-200 inline-flex items-center">
-                            Watch on YouTube
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-1">
-                <h3 class="text-2xl font-bold text-primary-dark-blue mb-6 border-b pb-3">More Recent News</h3>
-                <div class="space-y-6">
-
-                    <div class="group border-l-4 border-copper-gold pl-4 transition-all duration-300 hover:bg-white p-3 -m-3 rounded-lg">
-                        <p class="text-xs text-charcoal/60 mb-1">Oct 25, 2025 | <span class="font-semibold text-copper-gold">Construction</span></p>
-                        <a href="#" class="block text-lg font-bold text-primary-dark-blue leading-snug group-hover:text-copper-gold transition-colors duration-200">
-                            SSG Secures Major Infrastructure Contract for Coastal Road
-                        </a>
-                    </div>
-
-                    <div class="group border-l-4 border-transparent pl-4 transition-all duration-300 hover:border-copper-gold hover:bg-white p-3 -m-3 rounded-lg">
-                        <p class="text-xs text-charcoal/60 mb-1">Oct 18, 2025 | <span class="font-semibold text-copper-gold">CSR & Health</span></p>
-                        <a href="#" class="block text-lg font-bold text-primary-dark-blue leading-snug group-hover:text-copper-gold transition-colors duration-200">
-                            Community Health Drive: SSG Donates Medical Supplies
-                        </a>
-                    </div>
-
-                    <div class="group border-l-4 border-transparent pl-4 transition-all duration-300 hover:border-copper-gold hover:bg-white p-3 -m-3 rounded-lg">
-                        <p class="text-xs text-charcoal/60 mb-1">Oct 10, 2025 | <span class="font-semibold text-copper-gold">Logistics</span></p>
-                        <a href="#" class="block text-lg font-bold text-primary-dark-blue leading-snug group-hover:text-copper-gold transition-colors duration-200">
-                            Expanding Our Fleet: New Auto and Logistics Capacity
-                        </a>
-                    </div>
-                    
-                    <div class="group border-l-4 border-transparent pl-4 transition-all duration-300 hover:border-copper-gold hover:bg-white p-3 -m-3 rounded-lg">
-                        <p class="text-xs text-charcoal/60 mb-1">Sep 29, 2025 | <span class="font-semibold text-copper-gold">Finance</span></p>
-                        <a href="#" class="block text-lg font-bold text-primary-dark-blue leading-snug group-hover:text-copper-gold transition-colors duration-200">
-                            SSG Annual Report Highlights 15% Growth in Q3
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-        
-        <div class="text-center mt-16">
-            <a href="/news-archive" class="inline-block px-10 py-3 text-lg font-bold text-white bg-copper-gold rounded-full shadow-lg transition duration-300 hover:bg-primary-dark-blue hover:shadow-xl">
-                View All News & Archive
+          <div class="p-8">
+            <span class="text-sm font-semibold uppercase text-red-600 tracking-wider">LATEST VIDEO</span>
+            <h3 class="text-3xl font-bold text-primary-dark-blue mt-2 mb-3">
+              Behind the Build: Inauguration of the SSG Commercial Complex
+            </h3>
+            <p class="text-base text-charcoal/80 mb-5">
+              Watch the official ceremony and a time-lapse of our flagship construction project. This video provides a look at the final stages and the official hand-over event.
+            </p>
+            <a href="https://www.youtube.com/watch?v=pfbPy_JKiCo" target="_blank" rel="noopener noreferrer" class="text-copper-gold font-semibold hover:text-primary-dark-blue transition duration-200 inline-flex items-center">
+              Watch on YouTube
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
+          </div>
+        </article>
+
+        <!-- Recent featured posts (semantic list) -->
+        <section aria-labelledby="recent-posts" class="space-y-6">
+          <h3 id="recent-posts" class="sr-only">Recent news articles</h3>
+
+          <article class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-copper-gold">
+            <header class="flex items-start justify-between">
+              <div>
+                <time datetime="2025-11-21" class="text-xs text-charcoal/60">Nov 21, 2025</time>
+                <p class="text-sm font-semibold text-copper-gold">Automotive</p>
+                <h4 class="mt-2 text-lg font-bold text-primary-dark-blue">
+                  Shinning Star Group (SSG) Begins Shipment of Vehicles and Spare Parts to Liberia
+                </h4>
+              </div>
+            </header>
+            <p class="mt-3 text-charcoal/80">
+              SSG is excited to announce the commencement of vehicle and spare parts shipments from the United States to Liberia, reflecting our commitment to delivering high-quality automotive products.
+            </p>
+            <p class="mt-3 text-xs text-charcoal/60">Contact: Ansulisa Bility at <a href="tel:+231770178362" class="underline">0770178362</a></p>
+            <div class="mt-4">
+              <a href="https://www.facebook.com/share/p/16ekkTazxD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-copper-gold font-semibold hover:text-primary-dark-blue">Read / Share on Facebook →</a>
+            </div>
+          </article>
+
+          <article class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-transparent hover:border-copper-gold transition">
+            <header>
+              <time datetime="2025-10-25" class="text-xs text-charcoal/60">Oct 25, 2025</time>
+              <p class="text-sm font-semibold text-copper-gold">Construction</p>
+              <h4 class="mt-2 text-lg font-bold text-primary-dark-blue">
+                SSG Secures Major Infrastructure Contract for Coastal Road
+              </h4>
+            </header>
+            <p class="mt-3 text-charcoal/80">SSG has been awarded a major contract to upgrade coastal infrastructure—details forthcoming.</p>
+          </article>
+
+          <article class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-transparent hover:border-copper-gold transition">
+            <header>
+              <time datetime="2025-10-18" class="text-xs text-charcoal/60">Oct 18, 2025</time>
+              <p class="text-sm font-semibold text-copper-gold">CSR & Health</p>
+              <h4 class="mt-2 text-lg font-bold text-primary-dark-blue">
+                Community Health Drive: SSG Donates Medical Supplies
+              </h4>
+            </header>
+            <p class="mt-3 text-charcoal/80">Donations focused on clinics in Montserrado County to support vulnerable communities.</p>
+          </article>
+        </section>
+      </main>
+
+      <!-- Sidebar: more recent news + social embed -->
+      <aside class="lg:col-span-1 space-y-8">
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <h3 class="text-2xl font-bold text-primary-dark-blue mb-4 border-b pb-3">More Recent News</h3>
+          <ul class="space-y-6">
+            <li class="text-sm">
+              <time datetime="2025-10-10" class="text-xs text-charcoal/60">Oct 10, 2025</time>
+              <div class="mt-2">
+                <a href="#" class="block text-lg font-bold text-primary-dark-blue hover:text-copper-gold">Expanding Our Fleet: New Auto and Logistics Capacity</a>
+              </div>
+            </li>
+
+            <li class="text-sm">
+              <time datetime="2025-09-29" class="text-xs text-charcoal/60">Sep 29, 2025</time>
+              <div class="mt-2">
+                <a href="#" class="block text-lg font-bold text-primary-dark-blue hover:text-copper-gold">SSG Annual Report Highlights 15% Growth in Q3</a>
+              </div>
+            </li>
+          </ul>
         </div>
-        
+
+        <div class="bg-white rounded-xl p-4 shadow-lg">
+          <h4 class="text-lg font-semibold text-primary-dark-blue mb-3">Facebook</h4>
+          <div class="w-full overflow-hidden rounded-md">
+            <!-- Responsive facebook plugin: set width to 100% and limit height on small screens -->
+            <div class="w-full" style="max-width:100%;">
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0B4deMFewcpzfSqhmZnmeGSohp9SxSm1Fx1rakLQ78SwAUaxQrXhvpnDy4X68NBdwl%26id%3D61582571048631&show_text=true&width=500"
+                width="100%"
+                height="420"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="https://web.facebook.com/profile.php?id=61582571048631" class="inline-block px-8 py-3 text-lg font-bold text-white bg-copper-gold rounded-full shadow-lg transition duration-300 hover:bg-primary-dark-blue hover:shadow-xl" target="_blank" rel="noopener noreferrer">
+            View All News & Archive
+          </a>
+        </div>
+      </aside>
     </div>
+  </div>
 </section>
         
         <!-- 6. Contact Us Section -->
@@ -656,6 +708,7 @@
        class="fixed z-40 bottom-6 right-6 md:bottom-8 md:right-8 
               bg-whatsapp text-white p-4 rounded-full 
               shadow-lg transition-all duration-300 ease-in-out
+
               whatsapp-pulse
               hover:scale-110 hover:shadow-xl hover:bg-whatsapp-hover">
         
